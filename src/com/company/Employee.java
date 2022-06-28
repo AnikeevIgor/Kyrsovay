@@ -2,21 +2,16 @@ package com.company;
 
 public class Employee {
     private String employeeName;
-    private String departmentName;
+    private int departmentName;
     private double salaryEmployee;
-    int id;
-    private static int counter;
+    private int id = 1;
+    private static int counter = 1 ;
 
-    public Employee(String employeeName, String departmentName, double salaryEmployee) {
+    public Employee(String employeeName, int departmentName, double salaryEmployee) {
         this.employeeName = employeeName;
         this.departmentName = departmentName;
         this.salaryEmployee = salaryEmployee;
-        this.id = getCounter();
-        counter++;
-    }
-
-    public static int getCounter() {
-        return counter;
+        this.id = counter++;
     }
 
     public int getId() {
@@ -27,7 +22,7 @@ public class Employee {
         return this.employeeName;
     }
 
-    public String getDepartmentName() {
+    public int getDepartmentName() {
         return departmentName;
     }
 
@@ -35,11 +30,11 @@ public class Employee {
         return salaryEmployee;
     }
 
-    public void setDepartmentName(String departmentName) {
+    public void setDepartmentName(int departmentName) {
         this.departmentName = departmentName;
     }
 
-    public void setSalaryEmployee(int salaryEmployee) {
+    public void setSalaryEmployee(double salaryEmployee) {
         this.salaryEmployee = salaryEmployee;
     }
 
